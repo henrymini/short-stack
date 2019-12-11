@@ -1,4 +1,4 @@
-class GeneralsController < ApplicationController
+class GeneralsController < OpenReadController
   before_action :set_general, only: [:show, :update, :destroy]
 
   # GET /generals

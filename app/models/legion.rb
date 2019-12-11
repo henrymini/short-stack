@@ -1,0 +1,2 @@
+class Legion < ApplicationRecord
+end
