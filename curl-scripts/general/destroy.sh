@@ -4,4 +4,4 @@ curl "http://localhost:4741/generals/${ID}" \
   --request DELETE \
   --header "Authorization: Token token=${TOKEN}" \
 
-echo
+  echo

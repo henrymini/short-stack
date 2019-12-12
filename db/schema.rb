@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_11_220807) do
+ActiveRecord::Schema.define(version: 2019_12_12_162635) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,6 +36,8 @@ ActiveRecord::Schema.define(version: 2019_12_11_220807) do
     t.integer "size"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "general_id"
+    t.index ["general_id"], name: "index_legions_on_general_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -49,4 +51,5 @@ ActiveRecord::Schema.define(version: 2019_12_11_220807) do
   end
 
   add_foreign_key "examples", "users"
+  add_foreign_key "legions", "generals"
 end
