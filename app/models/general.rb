@@ -1,3 +1,3 @@
 class General < ApplicationRecord
-  has_many :legion
+  # has_many :legion
 end

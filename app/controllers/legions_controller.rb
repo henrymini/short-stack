@@ -46,6 +46,6 @@ class LegionsController < OpenReadController
 
     # Only allow a trusted parameter "white list" through.
     def legion_params
-      params.require(:legion).permit(:name, :size)
+      params.require(:legion).permit(:name, :size, :general_id)
     end
 end

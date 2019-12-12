@@ -6,6 +6,7 @@ curl "http://localhost:4741/legions" \
   --data '{
     "legion": {
       "name": "'"${NAME}"'",
-      "size": "'"${SIZE}"'"
+      "size": "'"${SIZE}"'",
+      "general_id": "'"${GENERAL_ID}"'"
     }
   }'
