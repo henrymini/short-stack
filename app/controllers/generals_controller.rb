@@ -1,5 +1,5 @@
 class GeneralsController < OpenReadController
-  before_action :set_general, only: [:show, :update, :destroy]
+  before_action :set_general, only: %i[show update destroy]
 
   # GET /generals
   def index
@@ -15,7 +15,7 @@ class GeneralsController < OpenReadController
 
   # POST /generals
   def create
-    @general = General.new(general_params)
+    @general = current_user.generals.new(general_params)
 
     if @general.save
       render json: @general, status: :created, location: @general
@@ -41,7 +41,7 @@ class GeneralsController < OpenReadController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_general
-      @general = General.find(params[:id])
+      @general = current_user.generals.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
