@@ -46,6 +46,6 @@ class GeneralsController < OpenReadController
 
     # Only allow a trusted parameter "white list" through.
     def general_params
-      params.require(:general).permit(:name, :age, :family)
+      params.require(:general).permit(:name, :age, :family, :user_id)
     end
 end
